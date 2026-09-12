@@ -1,6 +1,7 @@
 # learning-career-studio-LCS
 Students juggle a dozen tools to study and prepare for careers, LCS replaces them with one AI platform: personalized study plans, skill tracking, CV &amp; job matching, mock interviews etc and a live AI agent that guides every next step.
-# 🎓 Learning & Career Studio (LCS)
+
+#  Learning & Career Studio (LCS)
 
 **An AI-powered platform that guides students from learning to career-readiness.**
 
@@ -8,9 +9,9 @@ Students juggle a dozen tools to study and prepare for careers — LCS replaces 
 
 ---
 
-## 🚀 Features
+##  Features
 
-### 📘 Learning
+###  Learning
 - On-demand, structured topic explanations
 - Personalized study roadmap
 - Study planner (tasks & scheduling)
@@ -19,7 +20,7 @@ Students juggle a dozen tools to study and prepare for careers — LCS replaces 
 - Full mock exams
 - Progress tracking dashboard
 
-### 🚀 Career
+###  Career
 - AI career discovery based on your profile
 - Skills tracker
 - Skill gap analysis
@@ -27,20 +28,20 @@ Students juggle a dozen tools to study and prepare for careers — LCS replaces 
 - Project portfolio tracker
 - Certifications tracker
 
-### ✅ Preparation
+### Preparation
 - AI CV analyzer with instant feedback
 - Job description matcher
 - Internship discovery
 - Live AI mock interview with scored feedback
 - Career readiness score
 
-### ⚡ Intelligence
+###  Intelligence
 - **Next Best Action** — AI engine that recommends your single smartest next step, plus ranked alternatives
 - **Live AI Agent** — a persistent chat agent that follows you on every page (with its own full-page mode), aware of your profile and progress, and supports English, Urdu, and Hindi
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend:** Streamlit
 - **AI / LLM:** Groq API
@@ -49,7 +50,7 @@ Students juggle a dozen tools to study and prepare for careers — LCS replaces 
 
 ---
 
-## ⚙️ Getting Started
+##  Getting Started
 
 ```bash
 git clone https://github.com/<your-username>/learning-career-studio.git
@@ -63,7 +64,7 @@ App runs at `http://localhost:8501`.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 learning-career-studio/
 ├── app.py # Main Streamlit app (UI, pages, AI logic)
 ├── requirements.txt # Python dependencies
@@ -72,12 +73,12 @@ learning-career-studio/
 
 ---
 
-## 🏆 Hackathon Project
+##  Hackathon Project
 
 Built during a hackathon to turn career preparation into a continuous, guided process — instead of a last-minute scramble.
 
 ---
 
-## 📄 License
+##  License
 
 Licensed under the MIT License.
