@@ -5,7 +5,7 @@ Students juggle a dozen tools to study and prepare for careers, LCS replaces the
 
 **An AI-powered platform that guides students from learning to career-readiness.**
 
-Students juggle a dozen tools to study and prepare for careers — LCS replaces them with one AI platform: personalized study plans, skill tracking, CV & job matching, mock interviews, and a live AI agent that guides every next step.
+Students juggle a dozen tools to study and prepare for careers, LCS replaces them with one AI platform: personalized study plans, skill tracking, CV & job matching, mock interviews, and a live AI agent that guides every next step.
 
 ---
 
