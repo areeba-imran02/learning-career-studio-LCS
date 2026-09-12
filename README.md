@@ -50,20 +50,6 @@ Students juggle a dozen tools to study and prepare for careers, LCS replaces the
 
 ---
 
-##  Getting Started
-
-```bash
-git clone https://github.com/<your-username>/learning-career-studio.git
-cd learning-career-studio
-pip install -r requirements.txt
-export GROQ_API_KEY="your_api_key_here"
-streamlit run app.py
-```
-
-App runs at `http://localhost:8501`.
-
----
-
 ##  Project Structure
 learning-career-studio/
 ├── app.py # Main Streamlit app (UI, pages, AI logic)
@@ -77,7 +63,3 @@ learning-career-studio/
 Built during a hackathon to turn career preparation into a continuous, guided process , instead of a last-minute scramble.
 
 ---
-
-##  License
-
-Licensed under the MIT License.
