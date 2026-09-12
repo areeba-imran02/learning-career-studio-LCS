@@ -930,7 +930,7 @@ def render_dashboard():
         else:
             st.markdown('<p class="lcs-empty-state">No weak topics detected yet. Complete a quiz to see results here.</p>', unsafe_allow_html=True)
 
-        st.markdown("#### ❓ Recent Quiz Performance")
+        st.markdown("####  Recent Quiz Performance")
         quiz_history = st.session_state.study_data.get("quiz_history", [])
         if quiz_history:
             df = pd.DataFrame(quiz_history[-5:])
