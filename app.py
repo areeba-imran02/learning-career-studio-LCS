@@ -2175,7 +2175,7 @@ def render_live_agent_page():
                              if st.session_state.agent_context.get("language", "English") in ["English", "Urdu"] else 0)
         st.session_state.agent_context["language"] = lang
     with c1:
-        st.caption("This is the same agent that follows you on every page via the right-side panel — expanded here for longer conversations.")
+        st.caption("This is the same agent that follows you on every page via the right-side panel | expanded here for longer conversations.")
 
     with st.container(key="chat_panel_page"):
         render_chat_panel(key_prefix="full_page", message_height=480)
