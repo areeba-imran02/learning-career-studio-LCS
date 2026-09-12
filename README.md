@@ -36,8 +36,8 @@ Students juggle a dozen tools to study and prepare for careers — LCS replaces 
 - Career readiness score
 
 ###  Intelligence
-- **Next Best Action** — AI engine that recommends your single smartest next step, plus ranked alternatives
-- **Live AI Agent** — a persistent chat agent that follows you on every page (with its own full-page mode), aware of your profile and progress, and supports English, Urdu, and Hindi
+- **Next Best Action** : AI engine that recommends your single smartest next step, plus ranked alternatives
+- **Live AI Agent** : a persistent chat agent that follows you on every page (with its own full-page mode), aware of your profile and progress, and supports English, Urdu, and Hindi
 
 ---
 
@@ -70,12 +70,11 @@ learning-career-studio/
 ├── requirements.txt # Python dependencies
 └── README.md
 
-
 ---
 
 ##  Hackathon Project
 
-Built during a hackathon to turn career preparation into a continuous, guided process — instead of a last-minute scramble.
+Built during a hackathon to turn career preparation into a continuous, guided process , instead of a last-minute scramble.
 
 ---
 
