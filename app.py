@@ -537,7 +537,7 @@ def render_hero_banner():
     <div class="lcs-hero">
         <p class="lcs-hero-app-name"> Learning &amp; Career Studio</p>
         <p class="lcs-hero-tagline">One intelligent platform for your learning journey and career growth.</p>
-        <p class="lcs-hero-welcome"> Welcome back, {display_name} — here's where you stand today.</p>
+        <p class="lcs-hero-welcome"> Welcome back, {display_name} , here's where you stand today.</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -560,7 +560,7 @@ def render_footer():
     st.markdown(f"""
     <div class="lcs-footer">
         © {datetime.now().year} <b>Learning &amp; Career Studio (LCS)</b>. All rights reserved.<br>
-        Built for students, by design — Study smarter, plan sharper, grow faster.
+        From classroom to career, study smarter, prepare sharper, succeed faster..
     </div>
     """, unsafe_allow_html=True)
 
