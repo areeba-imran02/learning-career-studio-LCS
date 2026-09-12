@@ -18,7 +18,6 @@ from groq import Groq
 # ============================================================
 st.set_page_config(
     page_title="Learning & Career Studio",
-    page_icon="🎓",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -523,10 +522,9 @@ def render_top_header():
     st.markdown(f"""
     <div class="lcs-header">
         <div>
-            <p class="lcs-header-title">🎓 Learning &amp; Career Studio</p>
+            <p class="lcs-header-title"> Learning &amp; Career Studio</p>
             <p class="lcs-header-subtitle">Intelligent Student Learning &amp; Career Platform</p>
         </div>
-        <div class="lcs-header-chip">✨ AI-Powered</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -537,9 +535,9 @@ def render_hero_banner():
     display_name = profile.get("name") or "Student"
     st.markdown(f"""
     <div class="lcs-hero">
-        <p class="lcs-hero-app-name">🎓 Learning &amp; Career Studio</p>
+        <p class="lcs-hero-app-name"> Learning &amp; Career Studio</p>
         <p class="lcs-hero-tagline">One intelligent platform for your learning journey and career growth.</p>
-        <p class="lcs-hero-welcome">👋 Welcome back, {display_name} — here's where you stand today.</p>
+        <p class="lcs-hero-welcome"> Welcome back, {display_name} — here's where you stand today.</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -669,7 +667,7 @@ def render_sidebar():
     with st.sidebar:
         st.markdown("""
         <div class="lcs-brand">
-            <div class="lcs-brand-badge">🎓</div>
+            <div class="lcs-brand-badge"></div>
             <div>
                 <p class="lcs-brand-title">LCS</p>
                 <p class="lcs-brand-sub">Learning &amp; Career Studio</p>
@@ -859,7 +857,7 @@ def render_chat_panel(key_prefix="global", message_height=380):
     with msg_box:
         if not history:
             st.chat_message("assistant").write(
-                "Hi! I'm your LCS Agent 👋 Ask me about a topic, your career path, or how to use this app."
+                "Hi! I'm your LCS Agent! Ask me about a topic, your career path, or how to use this app."
             )
         for m in history:
             st.chat_message(m["role"]).write(m["content"])
@@ -910,7 +908,7 @@ def render_dashboard():
     col_left, col_right = st.columns(2)
 
     with col_left:
-        st.markdown("#### 📘 Study Progress")
+        st.markdown("#### Study Progress")
         topics = st.session_state.study_data["topics"]
         if topics:
             status_counts = {}
@@ -925,7 +923,7 @@ def render_dashboard():
         else:
             st.markdown('<p class="lcs-empty-state">No study topics yet. Add subjects to start your roadmap.</p>', unsafe_allow_html=True)
 
-        st.markdown("#### ⚠️ Weak Topics")
+        st.markdown("#### Weak Topics")
         weak = st.session_state.study_data.get("weak_topics", [])
         if weak:
             st.markdown("".join([f'<span class="lcs-badge">{w}</span>' for w in weak]), unsafe_allow_html=True)
@@ -941,7 +939,7 @@ def render_dashboard():
             st.markdown('<p class="lcs-empty-state">No quizzes attempted yet.</p>', unsafe_allow_html=True)
 
     with col_right:
-        st.markdown("#### 🧭 Career Matches")
+        st.markdown("####  Career Matches")
         matches = st.session_state.career_data.get("matches", [])
         if matches:
             sorted_matches = sorted(matches, key=lambda m: m["match_pct"], reverse=True)[:5]
@@ -955,7 +953,7 @@ def render_dashboard():
         else:
             st.markdown('<p class="lcs-empty-state">No career matches yet. Visit Discover to explore careers.</p>', unsafe_allow_html=True)
 
-        st.markdown("#### 🔍 Skill Gaps")
+        st.markdown("####  Skill Gaps")
         gaps = st.session_state.career_data.get("skill_gaps", [])
         if gaps:
             for g in gaps[:3]:
@@ -964,7 +962,7 @@ def render_dashboard():
         else:
             st.markdown('<p class="lcs-empty-state">No skill gap analysis yet.</p>', unsafe_allow_html=True)
 
-        st.markdown("#### 🗺️ Study Roadmap")
+        st.markdown("####  Study Roadmap")
         roadmap = st.session_state.study_data.get("roadmap", [])
         if roadmap:
             df = pd.DataFrame(roadmap)
@@ -972,7 +970,7 @@ def render_dashboard():
         else:
             st.markdown('<p class="lcs-empty-state">Your personalized study roadmap will appear here.</p>', unsafe_allow_html=True)
 
-        st.markdown("#### 🚀 Career Roadmap")
+        st.markdown("####  Career Roadmap")
         career_roadmap = st.session_state.career_data.get("roadmap", [])
         if career_roadmap:
             df = pd.DataFrame(career_roadmap)
@@ -980,7 +978,7 @@ def render_dashboard():
         else:
             st.markdown('<p class="lcs-empty-state">Your career roadmap will appear here.</p>', unsafe_allow_html=True)
 
-    st.markdown("#### 🗓️ Upcoming Goals")
+    st.markdown("####  Upcoming Goals")
     planner = st.session_state.study_data.get("planner", [])
     pending = [p for p in planner if p.get("status") != "Done"]
     if pending:
@@ -1441,7 +1439,7 @@ def render_quizzes_page():
     with c3:
         difficulty = st.selectbox("Difficulty", options=["Easy", "Medium", "Hard"], key="quiz_difficulty")
 
-    if st.button("🎲 Generate Quiz", key="gen_quiz_btn"):
+    if st.button(" Generate Quiz", key="gen_quiz_btn"):
         if not topic:
             st.error("Please enter a topic.")
         else:
@@ -1521,7 +1519,7 @@ def render_mock_exams_page():
     profile = st.session_state.profile
     subjects = profile.get("subjects", [])
 
-    st.info("⏱️ Suggested time: 20 minutes · 8 questions across your subjects.")
+    st.info(" Suggested time: 20 minutes · 8 questions across your subjects.")
     if "current_mock_exam" not in st.session_state:
         st.session_state.current_mock_exam = None
 
@@ -1627,7 +1625,7 @@ def render_discover_page():
     if not profile.get("skills") and not profile.get("subjects"):
         st.warning("Add some subjects, skills, or interests in My Profile for better career matches.")
 
-    if st.button("🧭 Find Career Matches", key="discover_btn"):
+    if st.button(" Find Career Matches", key="discover_btn"):
         with st.spinner("Analyzing your profile against career paths..."):
             messages = build_career_discovery_messages(profile)
             parsed, raw = call_groq_json(messages)
@@ -1786,7 +1784,7 @@ def render_career_roadmap_page():
     if not profile.get("career_goal"):
         st.warning("Set a Career Goal in My Profile for a more accurate roadmap.")
 
-    if st.button("🚀 Generate Career Roadmap"):
+    if st.button(" Generate Career Roadmap"):
         with st.spinner("Building your career roadmap..."):
             messages = build_career_roadmap_messages(profile, gaps)
             parsed, raw = call_groq_json(messages)
@@ -2172,9 +2170,9 @@ def render_next_action_page():
 def render_live_agent_page():
     c1, c2 = st.columns([3, 1])
     with c2:
-        lang = st.selectbox("Language", options=["English", "Urdu", "Hindi"],
-                             index=["English", "Urdu", "Hindi"].index(st.session_state.agent_context.get("language", "English"))
-                             if st.session_state.agent_context.get("language", "English") in ["English", "Urdu", "Hindi"] else 0)
+        lang = st.selectbox("Language", options=["English", "Urdu"],
+                             index=["English", "Urdu"].index(st.session_state.agent_context.get("language", "English"))
+                             if st.session_state.agent_context.get("language", "English") in ["English", "Urdu"] else 0)
         st.session_state.agent_context["language"] = lang
     with c1:
         st.caption("This is the same agent that follows you on every page via the right-side panel — expanded here for longer conversations.")
