@@ -37,8 +37,7 @@ Students juggle a dozen tools to study and prepare for careers, LCS replaces the
 
 ###  Intelligence
 - **Next Best Action** : AI engine that recommends your single smartest next step, plus ranked alternatives
-- **Live AI Agent** : a persistent chat agent that follows you on every page (with its own full-page mode), aware of your profile and progress, and supports English, Urdu, and Hindi
-
+- **Live AI Agent** : a persistent chat agent that follows you on every page (with its own full-page mode), aware of your profile and progress, and supports English, Urdu.
 ---
 
 ##  Tech Stack
